@@ -1,3 +1,2 @@
 #!/bin/bash
-CFILE="ALX.c"
-cpp $CFILE > c
+CFILE="ALX.c" cpp $CFILE > c
