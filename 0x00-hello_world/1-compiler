@@ -1,2 +1,2 @@
 #!/bin/bash
-CFILE="ALX.c" ALX=$(basename "$CFILE" .c) gcc -c "$CFILE" -o "$ALX.o"
+gcc -c $CFILE
