@@ -7,17 +7,23 @@
  *
  * Return: pointer to resulting string
  */
-char *_strcat(char *dest, char *src)
-{
-    int dest_len = 0, i;
-
-    while (dest[dest_len] != '\0')
-        dest_len++;
-
-    for (i = 0; src[i] != '\0'; i++)
-        dest[dest_len + i] = src[i];
-
-    dest[dest_len + i] = '\0';
-
-    return (dest);
+char *_strcat(char *dest, char *src) {
+    char *ptr = dest;
+    
+    // Move pointer to the end of dest string
+    while (*ptr != '\0') {
+        ptr++;
+    }
+    
+    // Append src string to dest
+    while (*src != '\0') {
+        *ptr = *src;
+        ptr++;
+        src++;
+    }
+    
+    // Add terminating null byte
+    *ptr = '\0';
+    
+    return dest;
 }
